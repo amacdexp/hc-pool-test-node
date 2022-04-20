@@ -1,4 +1,4 @@
----
+--- 
 applications:
 - name: hc-pool-test-node
   #random-route: true
