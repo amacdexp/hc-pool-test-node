@@ -1,0 +1,15 @@
+---
+applications:
+- name: hc-pool-test-node
+  #random-route: true
+  path: app
+  memory: 128M
+
+  ## crashes app ... when a pool connection is reused?
+  #env:
+  #      HDB_NODEJS_MAX_OPEN_CONNECTIONS: 12
+  services:
+  - hc_default_hdi
+  - hc_tenant1_hdi
+  - hc_tenant2_hdi
+
