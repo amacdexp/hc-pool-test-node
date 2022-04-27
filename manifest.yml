@@ -5,9 +5,9 @@ applications:
   path: app
   memory: 128M
 
-  ## crashes app ... when a pool connection is reused?
-  #env:
-  #      HDB_NODEJS_MAX_OPEN_CONNECTIONS: 12
+  ## if HDB_NODEJS_MAX_OPEN_CONNECTIONS set if connections greater then will return  -20023 Error  by design
+  env:
+        HDB_NODEJS_MAX_OPEN_CONNECTIONS: 20
   services:
   - hc_default_hdi
   - hc_tenant1_hdi
