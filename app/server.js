@@ -20,7 +20,7 @@ app.get("/", function (req, res) {
 });
 
 
-//Hana Client test
+//Hana Client test    with CONNECTION Sharing logic
 app.get("/asyncTest", function (req, res) {
 
 
@@ -38,7 +38,7 @@ app.get("/asyncTest", function (req, res) {
 });
 
 
-
+//Contains CONNECTION sharing logic across technical users (e.g. between HDI tenants)
 const asyncCallDB = async (req, res) => {
   
 
@@ -178,7 +178,7 @@ const asyncCallDB = async (req, res) => {
 
 
 
-//Hana Client test Std
+//Hana Client test Standard Pooling logic
 app.get("/asyncTestStd", function (req, res) {
 
 
@@ -197,7 +197,7 @@ app.get("/asyncTestStd", function (req, res) {
 
 
 
-
+//Contains Standard Pooling logic
 const asyncCallDBstd = async (req, res) => {
   
 
